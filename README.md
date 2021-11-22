@@ -12,11 +12,32 @@ git clone git@github.com:DevHwary/Github_Trending_Repos.git
 cd Github_Trending_Repos/trending_repos/
 docker-compose up --build
 ```
+*Please ignore or remove venv it will not cause any problems*
 
-## Run tests
+## Run tests.
 ```
 docker-compose exec backend sh
 python manage.py tests --verbosity=2
 ```
-
-*Please ignore or remove venv it will not cause any problems*
+## Docs for endpoint of the service :
+- URL : [http://127.0.0.1:8000/github/trending_repos]
+- METHOD : GET
+- RESPONSE : JSON
+- RESPONSE STATUS : Status:200 OK
+- RESPONSE DATA : 
+*  {
+    "HTML": {
+        "Number of repos": 2,
+        "List of repos": [
+            [
+                "https://api.github.com/repos/sunym1993/flash-linux0.11-talk",
+                "https://github.com/sunym1993/flash-linux0.11-talk"
+            ],
+            [
+                "https://api.github.com/repos/themesberg/windster-tailwind-dashboard",
+                "https://github.com/themesberg/windster-tailwind-dashboard"
+            ]
+        ]
+    },
+   }
+    *
